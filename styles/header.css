@@ -1,0 +1,16 @@
+header {
+
+    display: flex;
+    gap: .7rem;
+    text-align: center;    
+
+
+    & h1 {
+        font-family: "Sora", sans-serif;
+        font-weight: 700;
+        font-size: 4rem;
+        letter-spacing: 26.67;
+        text-transform: lowercase;
+        display: inline;
+    }
+}

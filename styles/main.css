@@ -1,0 +1,7 @@
+main {
+    margin-inline-start: 40rem;
+
+    & > img {
+        margin-top: 6rem;
+    }
+}

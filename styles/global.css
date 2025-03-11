@@ -34,4 +34,20 @@
 
 } 
 
+body {
+    background-color: var(--bg-primary);
+    margin-top: 2.5rem;
+}
 
+.none {
+    display: none;
+}    
+
+
+
+@media (width >= 80em) {
+    .none {
+        display: block;
+    }
+
+}

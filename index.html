@@ -9,13 +9,59 @@
 
     <title>QuickList</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sora:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/index.css">
 
 </head>
 
 <body>
-    
+     <header class="none">
+        <img src="assets/logo.svg" alt="Logo QuickList">
+        <h1>QuickList</h1>
+     </header>
+
+     <main>
+        <img src="assets/icons/btnBack.svg" alt="">
+
+        <h1>Compras da semana</h1>
+
+        <div class="wrapper-add">
+            <input type="text" id="product" placeholder="Adicione um novo item" required>
+            <button>Adicionar item</button>
+        </div>
+
+        <ul>
+            <li>
+                <div class="checked"></div>
+                <span>Pão de forma</span>
+                <img src="assets/icons/trash.svg" alt="Lixeira">
+            </li>
+
+            <li>
+                <div class="checked"></div>
+                <span>Café preto</span>
+                <img src="assets/icons/trash.svg" alt="Lixeira">
+            </li>
+
+            <li>
+                <div class="checked"></div>
+                <span>Suco de laranja</span>
+                <img src="assets/icons/trash.svg" alt="Lixeira">
+            </li>
+
+            <li>
+                <div class="checked"></div>
+                <span>Bolacha</span>
+                <img src="assets/icons/trash.svg" alt="Lixeira">
+            </li>
+        </ul>
+
+        <div class="item-remove">
+            <img src="assets/icons/warning.svg" alt="Alerta de item removido">
+            <span>O item foi removido da lista</span>
+            <img src="assets/icons/delete.svg" alt=""> 
+        </div>
+     </main>
     
     <script src="scripts.js"></script>
 </body>
