@@ -1,14 +1,9 @@
 main {
-    padding: 3.2rem;
+    max-width: 62.7rem;
+    margin: auto;
 
     & > img {
-        margin-top: 8rem;
-    }
-
-    & input, button {
-        border: none;
-        font: inherit;
-        color: inherit;
+        margin-top: 6rem;
     }
 
     & h1 {
@@ -16,63 +11,122 @@ main {
         margin-top: 1.6rem;
     }
 
+    & .wrapper-add input,
+    & .wrapper-add button {
+        border: none;
+        padding: 1.1rem;
+        border-radius: 1.2rem;
+
+    }
+
     & .wrapper-add {
+        border: 1px solid red;
         display: flex;
-        flex-direction: column;
         gap: 1.6rem;
 
-        & input {
-            margin-top: 4.4rem;
-            padding-block: 1.1rem;
-            padding-left: 1.8rem;
+        margin-top: 4.4rem;
+    }
+
+    & .wrapper-add input {
+        flex: 3;
+        background-color: var(--bg-secondary);
+        border: 2px solid var(--border-primary);
+
+        &::placeholder {
+            font-family: "Inter", sans-serif;
+            font-size: 1.6rem;
+            line-height: 140;
+        }
+
+        &:hover {
+            background-color: red; 
+        }
+    }
+
+    & .wrapper-add button {
+        flex: 1;
+        cursor: pointer;
+        font: var(--label);
+        color: var(--bg-secondary);
+        background-color: var(--color-brand);
+    }
+
+    & ul {
+        margin-top: 4rem;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+
+        & li {
+            border: 1px solid green;
+            display: flex;
+            align-items: center;
+            align-content: center;
+            gap: .85rem;
+            padding-block: .8rem;
+            padding-inline: 1.2rem;
             border-radius: 1.2rem;
             background-color: var(--bg-secondary);
-            border: 2px solid var(--border-primary);
 
-            &::placeholder {
-                font-family: "Inter", sans-serif;
-                font-size: 1.6rem;
-                line-height: 140%;
+            & .checked {
+                width: 1.6rem;
+                height: 1.6rem;
+                background-color: var(--bg-secondary);
+                border: 1px solid var(--border-primary);
+                border-radius: .6rem;
+                cursor: pointer;
             }
-        }
 
-        & button {
-            border-radius: 1.2rem;
-            font: var(--label);
-            color: var(--bg-secondary);
-            cursor: pointer;
-            background-color: var(--color-brand);
-            padding-block: 1.2rem;
+            & span {
+                font: var(--paragraph);
+                color: var(--content-secondary);
+            }
+
+            & img {
+                margin-left: auto;
+                cursor: pointer;
+            }
+
         }
     }
+
+    & .item-remove {
+        margin-top: 3.6rem;
+        border: 1px solid red;
+        display: flex;
+        gap: .8rem;
+        align-items: center;
+        align-content: center;
+        padding: 1.2rem;
+        border-radius: 1.2rem;
+
+        background-color: var(--color-danger);
+
+        & img:first-child {
+            
+        }
+
+        & span {
+            font: var(--label);
+            color: #fff;
+        }
+
+        & img:last-child {
+            margin-left: auto;
+        }
+
+    }
+
+
 }
 
-@media (width >= 80em) {
-    main > img {
-        margin-top: 6rem;
+@media (max-width: 48em) {
+    main {
+        padding-inline: 3.2rem;
     }
 
-    main {
-        max-width: 62.7rem;
-        margin: auto;
-        
-        & .wrapper-add {
-            flex-direction: row; 
-            align-items: center;
-
-            & input {
-                flex: 3;
-            }
-                       
-
-            & button {
-                flex: 1;                
-            }
-
-            & input, button {
-                height: 4.4rem;
-            }
-        }
-
+    main .wrapper-add {
+        flex-direction: column;
     }
 }
