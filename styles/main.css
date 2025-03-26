@@ -20,7 +20,6 @@ main {
     }
 
     & .wrapper-add {
-        border: 1px solid red;
         display: flex;
         gap: 1.6rem;
 
@@ -39,7 +38,11 @@ main {
         }
 
         &:hover {
-            background-color: red; 
+            border: 2px solid var(--border-hover); 
+        }
+
+        &:focus {
+            border: 2px solid var(--color-brand);
         }
     }
 
@@ -49,6 +52,10 @@ main {
         font: var(--label);
         color: var(--bg-secondary);
         background-color: var(--color-brand);
+
+        &:hover {
+            background-color: var(--color-brand-hover);
+        }
     }
 
     & ul {
@@ -59,7 +66,7 @@ main {
         gap: 1.2rem;
 
         & li {
-            border: 1px solid green;
+            border: none;
             display: flex;
             align-items: center;
             align-content: center;
@@ -76,6 +83,20 @@ main {
                 border: 1px solid var(--border-primary);
                 border-radius: .6rem;
                 cursor: pointer;
+
+                &:hover {
+                    border: 1px solid var(--border-hover);
+                }
+
+            }
+
+            & .checked-active {
+                background-image: url("../assets/icons/checked.svg");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                border: none;
+
             }
 
             & span {
@@ -103,9 +124,6 @@ main {
 
         background-color: var(--color-danger);
 
-        & img:first-child {
-            
-        }
 
         & span {
             font: var(--label);
@@ -114,6 +132,7 @@ main {
 
         & img:last-child {
             margin-left: auto;
+            cursor: pointer;
         }
 
     }
@@ -121,12 +140,21 @@ main {
 
 }
 
+
 @media (max-width: 48em) {
+
     main {
         padding-inline: 3.2rem;
+
+        & ul {
+            & li {
+                padding-block: 1.2rem;
+            }
+        }
     }
 
     main .wrapper-add {
         flex-direction: column;
     }
 }
+
