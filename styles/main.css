@@ -4,6 +4,7 @@ main {
 
     & > img {
         margin-top: 6rem;
+        cursor: pointer;
     }
 
     & h1 {
