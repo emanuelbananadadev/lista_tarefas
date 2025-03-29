@@ -3,6 +3,7 @@ const btn = document.getElementById("mainBtn")
 const ul = document.getElementsByTagName("ul")[0]
 const divRemove = document.getElementsByClassName("item-remove")[0]
 const btnWarning = document.querySelector("div img:nth-child(3)")
+const btnBack = document.querySelector("main img")
 
 
 function addItem() {
@@ -79,3 +80,6 @@ function contSelectedItems() {
     console.log(`Itens selecionados: ${selectedCount}`)
 }
 
+btnBack.addEventListener("click", () => {
+    location.reload()
+})
